@@ -1,0 +1,82 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>jenkins.diagnostics.ControllerExecutorsNoAgents</string>
+    <string>jenkins.diagnostics.RootUrlNotSetMonitor</string>
+    <string>jenkins.security.QueueItemAuthenticatorMonitor</string>
+    <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
+  </disabledAdministrativeMonitors>
+  <version>2.289.1</version>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:sudheer</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:sudheer</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:sudheer</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:sudheer</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:sudheer</permission>
+    <permission>hudson.model.Computer.Build:sudheer</permission>
+    <permission>hudson.model.Computer.Configure:sudheer</permission>
+    <permission>hudson.model.Computer.Connect:sudheer</permission>
+    <permission>hudson.model.Computer.Create:sudheer</permission>
+    <permission>hudson.model.Computer.Delete:sudheer</permission>
+    <permission>hudson.model.Computer.Disconnect:sudheer</permission>
+    <permission>hudson.model.Hudson.Administer:sudheer</permission>
+    <permission>hudson.model.Hudson.Read:sudheer</permission>
+    <permission>hudson.model.Item.Build:sudheer</permission>
+    <permission>hudson.model.Item.Cancel:sudheer</permission>
+    <permission>hudson.model.Item.Configure:sudheer</permission>
+    <permission>hudson.model.Item.Create:sudheer</permission>
+    <permission>hudson.model.Item.Delete:sudheer</permission>
+    <permission>hudson.model.Item.Discover:sudheer</permission>
+    <permission>hudson.model.Item.Move:sudheer</permission>
+    <permission>hudson.model.Item.Read:sudheer</permission>
+    <permission>hudson.model.Item.Workspace:sudheer</permission>
+    <permission>hudson.model.Run.Delete:sudheer</permission>
+    <permission>hudson.model.Run.Replay:sudheer</permission>
+    <permission>hudson.model.Run.Update:sudheer</permission>
+    <permission>hudson.model.View.Configure:sudheer</permission>
+    <permission>hudson.model.View.Create:sudheer</permission>
+    <permission>hudson.model.View.Delete:sudheer</permission>
+    <permission>hudson.model.View.Read:sudheer</permission>
+    <permission>hudson.scm.SCM.Tag:sudheer</permission>
+    <permission>jenkins.metrics.api.Metrics.HealthCheck:sudheer</permission>
+    <permission>jenkins.metrics.api.Metrics.ThreadDump:sudheer</permission>
+    <permission>jenkins.metrics.api.Metrics.View:sudheer</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:sudheer</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:sudheer</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.View:sudheer</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>false</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>all</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <primaryView>all</primaryView>
+  <slaveAgentPort>50000</slaveAgentPort>
+  <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
+  <nodeProperties/>
+  <globalNodeProperties/>
+</hudson>
